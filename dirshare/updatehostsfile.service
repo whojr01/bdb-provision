@@ -1,0 +1,12 @@
+[Unit]
+	Description=Updates host file by calling script
+	Requires=network-online.target
+	After=vboxadd-service.service
+
+[Service]
+	Type=simple
+	ExecStart=/root/UpdateHostsFile.sh
+
+[Install]
+WantedBy=mulit-user.target
+

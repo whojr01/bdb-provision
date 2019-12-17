@@ -1,0 +1,51 @@
+{
+	"vm_machines" : [
+		{
+			"node" : "buildprod",
+			"box" : "centos/7",
+			"shared" : [
+				{
+					"name" : "admin",
+					"host" : "d:/bdb-provision/dirshare"
+				},
+				{
+					"name" : "foldershare",
+					"host" : "d:/bdb-provision/foldershare"
+				}
+			],
+			"memory" : 2048,
+			"ip" : "192.168.32.10",
+			"ports" : [
+				{
+					"host" : 9000,
+					"guest" : 80,
+					"id" : "http"
+				},
+				{
+					"host" : 9001,
+					"guest" : 8080,
+					"id" : "misc"
+				}
+			]
+		},
+		{
+			"node" : "testprod",
+			"box" : "centos/7",
+			"shared" : [
+				{
+					"name" : "admin",
+					"host" : "d:/bdb-provision/dirshare"
+				}
+			],
+			"memory" : 2048,
+			"ip" : "192.168.32.20",
+			"ports" : [
+				{
+					"host" : 9090,
+					"guest" : 80,
+					"id" : "http"
+				}
+			]
+		}
+	]
+}

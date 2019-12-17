@@ -1,0 +1,4 @@
+Calculating the size of thin volumn metadata
+
+ThinPoolLVSize / ThinPoolLVChunkSize * 64b
+
